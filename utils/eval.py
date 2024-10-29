@@ -1,5 +1,6 @@
 import torch
-import hfai.nccl.distributed as dist
+# import hfai.nccl.distributed as dist
+import torch.distributed as dist
 
 
 @torch.no_grad()

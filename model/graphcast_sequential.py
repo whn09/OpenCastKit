@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from torch_scatter import scatter
-from haiscale.pipeline import SequentialModel
+# from haiscale.pipeline import SequentialModel
 
 
 class FeatEmbedding(torch.nn.Module):
@@ -277,4 +277,5 @@ def get_graphcast_module(args):
     head = PredictNet(args)
     layers = [embed] + gnn_blocks + [head]
 
-    return SequentialModel(*layers)
+    # return SequentialModel(*layers)
+    return nn.Sequential(*layers)
